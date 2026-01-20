@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Caffeine With Me</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Caffeine, the way you feel.</h1>
+    <p>A mood-driven coffee experience designed around emotions, not menus.</p>
+    <button onclick="scrollToMoods()">Find My Coffee Mood</button>
+  </section>
+
+  <!-- MOODS -->
+  <section class="moods" id="moods">
+    <h2>What’s your coffee mood?</h2>
+
+    <div class="mood-grid">
+      <div class="mood-card" onclick="showMood('focus')">🎧 Deep Focus</div>
+      <div class="mood-card" onclick="showMood('study')">🧠 Solo Sunday</div>
+      <div class="mood-card" onclick="showMood('dates')">💕 Coffee Dates</div>
+      <div class="mood-card" onclick="showMood('energy')">⏰ Monday Deadlines</div>
+      <div class="mood-card" onclick="showMood('night')">🌙 Midnight Cravings</div>
+      <div class="mood-card" onclick="showMood('creative')">🎨 Creative Chaos</div>
+    </div>
+  </section>
+
+  <!-- MOOD OUTPUT -->
+  <section class="mood-output" id="moodOutput">
+    <h2 id="moodTitle"></h2>
+    <p id="moodDesc"></p>
+    <ul id="moodDrinks"></ul>
+  </section>
+
+  <!-- CLEAN COFFEE -->
+  <section class="clean">
+    <h2>Clean Coffee Philosophy</h2>
+    <p>
+      No artificial flavours. No sugar-first drinks.<br/>
+      We build flavour at the bean — sourcing from Coorg & Chikmagalur.
+    </p>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="events">
+    <h2>Rituals & Events</h2>
+    <div class="event-list">
+      <div>☕ Solo Sunday Sessions</div>
+      <div>📊 Monday Morning Deadlines</div>
+      <div>✍️ Creative Chaos Nights</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>What’s your coffee mood today?</h2>
+    <button>Visit the Café</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Caffeine With Me</p>
+    <p>Instagram · Mood-Driven Coffee</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
