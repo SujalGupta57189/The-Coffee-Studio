@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fafafa;
+  color: #111;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Grain texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+    url("https://images.unsplash.com/photo-1511920170033-f8396924c348");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+  position: relative;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 1.2rem 0 2rem;
+  font-size: 1.1rem;
+}
+
+.hero button {
+  padding: 0.9rem 1.8rem;
+  border: none;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hero-sub {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Floating elements */
+.floating-elements {
+  position: absolute;
+  right: 6%;
+  top: 15%;
+  font-size: 2.5rem;
+  opacity: 0.25;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* MOODS */
+.moods {
+  padding: 4rem 3rem;
+}
+
+.moods h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 2rem;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.mood-card {
+  background:
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.9)),
+    url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
+  background-size: cover;
+  background-position: center;
+  padding: 2.5rem;
+  border-radius: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.mood-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+/* MOOD OUTPUT */
+.mood-output {
+  padding: 3rem;
+  background: #111;
+  color: #fff;
+  display: none;
+}
+
+.mood-output h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.mood-output ul {
+  margin-top: 1rem;
+}
+
+.mood-output li {
+  margin-bottom: 0.5rem;
+}
+
+/* CLEAN */
+.clean {
+  padding: 4rem 3rem;
+  background: #f1ede7;
+  text-align: center;
+}
+
+/* EVENTS */
+.events {
+  padding: 4rem 3rem;
+}
+
+.event-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.event-list div {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 24px;
+}
+
+/* CTA */
+.cta {
+  padding: 4rem 3rem;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.cta button {
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background: #f6f1eb;
+}
